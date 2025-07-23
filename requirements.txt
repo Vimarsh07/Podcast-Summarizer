@@ -1,33 +1,32 @@
+# ======================== requirements.txt ========================
 # core functionality
-feedparser==6.0.10
+def feedparser==6.0.10
 requests==2.31.0
 pydub==0.25.1
 python-dotenv==1.0.1
 ffmpeg-python==0.2.0
 soundfile==0.12.1
-
-# database
 psycopg2-binary==2.9.9
+openai==0.28.0
 
-# OpenAI
-openai==1.23.2
-
-# scientific stack (compatible with pyannote + scipy)
+# scientific & ML stack
 numpy==1.24.4
 scipy==1.10.1
 
-# PyTorch CPU build
-# (install these with `--index-url https://download.pytorch.org/whl/cpu`)
-torch==2.0.0+cpu
-torchaudio==2.0.1+cpu
+# PyTorch GPU build (for Colab)
+torch==2.0.1+cu118
+torchvision==0.15.2+cu118
+torchaudio==2.0.2+cu118
 
-# transformer models for alignment
-transformers==4.32.1
+# Transformers & dependencies
+transformers==4.41.0
+tokenizers==0.19.1
 datasets==2.13.1
 sentencepiece==0.1.99
 
-# faster-whisper (must be 0.6.0 for whisperx v3.1.1)
+# ASR/Diarization
+ctranslate2
 faster-whisper==0.6.0
-
-# whisperx from GitHub (v3.1.1 includes diarization + alignment support)
+pyannote.audio==2.1.1
+huggingface_hub
 whisperx @ git+https://github.com/m-bain/whisperx.git@v3.1.1
